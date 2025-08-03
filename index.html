@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stitch Design - E-commerce Store</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <button class="menu-btn" id="menuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">Stitch Design</h1>
+                </div>
+                <div class="nav-center">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search products and categories" id="searchInput">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-icon" id="cartBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"></path>
+                            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"></path>
+                            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="nav-icon" id="userBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="mainContent">
+            <!-- Home Page -->
+            <div id="homePage" class="page active">
+                <!-- Categories -->
+                <section class="categories-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>Featured Categories</h2>
+                        </div>
+                        <div class="categories-grid" id="categoriesGrid">
+                            <!-- Categories will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Products -->
+                <section class="featured-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>Featured</h2>
+                            <div class="filter-tabs">
+                                <button class="filter-tab active" data-filter="all">All</button>
+                                <button class="filter-tab" data-filter="men">Men</button>
+                                <button class="filter-tab" data-filter="women">Women</button>
+                                <button class="filter-tab" data-filter="kids">Kids</button>
+                                <button class="filter-tab" data-filter="shoes">Shoes</button>
+                            </div>
+                        </div>
+                        <div class="products-grid" id="featuredProducts">
+                            <!-- Products will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Popular Items -->
+                <section class="popular-section">
+                    <div class="container">
+                        <h2>Popular Items</h2>
+                        <div class="products-grid" id="popularProducts">
+                            <!-- Products will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Top Deals -->
+                <section class="deals-section">
+                    <div class="container">
+                        <h2>Top Deals</h2>
+                        <div class="deals-grid" id="topDeals">
+                            <!-- Deals will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Product Detail Page -->
+            <div id="productPage" class="page">
+                <div class="container">
+                    <button class="back-btn" id="backBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5"></path>
+                            <path d="M12 19L5 12L12 5"></path>
+                        </svg>
+                    </button>
+                    <div class="product-detail" id="productDetail">
+                        <!-- Product details will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Page -->
+            <div id="cartPage" class="page">
+                <div class="container">
+                    <div class="cart-header">
+                        <button class="back-btn" id="cartBackBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5"></path>
+                                <path d="M12 19L5 12L12 5"></path>
+                            </svg>
+                        </button>
+                        <h2>Cart</h2>
+                    </div>
+                    <div class="cart-content" id="cartContent">
+                        <!-- Cart items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkout Page -->
+            <div id="checkoutPage" class="page">
+                <div class="container">
+                    <div class="checkout-header">
+                        <button class="back-btn" id="checkoutBackBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5"></path>
+                                <path d="M12 19L5 12L12 5"></path>
+                            </svg>
+                        </button>
+                        <h2>Checkout</h2>
+                    </div>
+                    <div class="checkout-content" id="checkoutContent">
+                        <!-- Checkout form will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Page -->
+            <div id="accountPage" class="page">
+                <div class="container">
+                    <div class="account-header">
+                        <button class="back-btn" id="accountBackBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5"></path>
+                                <path d="M12 19L5 12L12 5"></path>
+                            </svg>
+                        </button>
+                        <h2>Account</h2>
+                    </div>
+                    <div class="account-content" id="accountContent">
+                        <!-- Account content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <h3>Menu</h3>
+                    <button class="close-menu" id="closeMenu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="#" data-page="home">Home</a>
+                    <a href="#" data-category="men">Men</a>
+                    <a href="#" data-category="women">Women</a>
+                    <a href="#" data-category="kids">Kids</a>
+                    <a href="#" data-category="shoes">Shoes</a>
+                    <a href="#" data-category="accessories">Accessories</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="js/database.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
